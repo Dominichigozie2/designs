@@ -114,9 +114,13 @@ nav{
 /* for the sub menus */
 
 .list li:hover .sub-menu-two,
-.list li:hover .sub-menu-three,
-.list li:hover .sub-menu-four,
+.list li:hover .sub-menu-three{
+    display: flex;
+    animation: fade 500ms ease-in-out forwards;
+}
+.list li:hover .sub-menu-fo     ur,
 .list li:hover .sub-menu-one{
+    display: block;
     animation: fade 500ms ease-in-out forwards;
 }
 .sub-menu-one{
@@ -124,31 +128,35 @@ nav{
     padding: 1rem;
     background: #fff;
     opacity: 0;
+    display: none;
 }
 .sub-menu-two{
   position: absolute;
   background: #fff;
-  display: flex;
+  /* display: flex; */
   gap: 2rem;
   padding: 1rem;
   flex-wrap: wrap;
   opacity: 0;
+  display: none;
 }
 
 .sub-menu-three{
   position: absolute;
-  background: red;
-  display: flex;
+  background: #fff;
+  /* display: flex; */
   gap: 2rem;
   padding: 1rem;
   flex-wrap: wrap;
   opacity: 0;
+  display: none;
 }
 .sub-menu-four{
     position: absolute;
-    background: red;
+    background: #fff;
     padding: 1rem;
     opacity: 0;
+    display: none;
 }
 
 
@@ -156,6 +164,7 @@ nav{
     to{
         transform: translate(-40%);
         opacity: 1;
+        display: flex;
     }
 }
 
@@ -211,6 +220,7 @@ header::before{
     position: absolute;
     font-size: 1.4rem;
     margin-top: .8rem;
+    display: none;
     right: 2rem;
 }
 .side-bar li,
@@ -270,6 +280,7 @@ border-radius: 0 0 70px;
  flex-wrap: wrap;
  width: 70%;
  height: 100%;
+ justify-content: center;
  align-items: center;
 }
 .home-content{
@@ -566,6 +577,7 @@ z-index: 2;
  place-content: center;
  padding: 1rem;
  margin: 2rem 0;
+ width: 100%;
  position: sticky;
  top: 4rem;
  z-index: 7;
@@ -956,7 +968,10 @@ form button{
         height: 20px;
     }
     .cat-container{
-        width: 95%;
+        width: 100%;
+    }
+    .game{
+        width: 270px;
     }
     .index{
         padding: .3rem;
@@ -1015,5 +1030,8 @@ form button{
     }
     .get h1{
         font-size: 2rem;
+    }
+    #bar{
+        display: flex;
     }
 }
